@@ -4,10 +4,10 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
 
-  List<String> animals = [
-    "lion",
-    "cat",
-    "dogs"
+  List<String> questions = [
+    "What is your favorit color?",
+    "What is your favorite language?",
+    "What is your favorite food?"
   ];
 
   @override
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           title: Text('My First App'),
         ),
         body: Column(children: <Widget>[
-          Text("The Question"),
+          Text(questions.elementAt(1)),
           RaisedButton(child: Text("Answer 1"), onPressed: () => answerQuestion(1),),
           RaisedButton(child: Text("Answer 2"), onPressed: () => answerQuestion(2),),
           RaisedButton(child: Text("Answer 3"), onPressed: (){ print('Answer 3 chosen'); },),
@@ -28,9 +28,10 @@ class MyApp extends StatelessWidget {
     );
   }
 
+  // Video Time 3:23:30
+
   // Methods
   void answerQuestion(int option){
     print('Answer $option chosen');
   }
-
 }
